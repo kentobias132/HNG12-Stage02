@@ -76,7 +76,7 @@ const Confirmation = ({
                 <p className="text-xs text-gray-400 ">Ticket for:</p>
                 <h3 className="text-sm">{ticketNumber} </h3>
               </div>
-              <div className="col-span-2 py-0.5 ">
+              <div className="col-span-2 py-0.5 h-14 ">
                 <p className="text-xs text-gray-400 ">Special Request</p>
                 <h3 className=" line-clamp-2 text-sm">{request}</h3>
               </div>
