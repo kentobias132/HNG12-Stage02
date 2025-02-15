@@ -172,16 +172,6 @@ const AvatarUpload: React.FC<AvatarUploadProps> = ({ onUpload }) => {
             />
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 flex items-center justify-center rounded-2xl transition-opacity duration-300">
-              {/* <button
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent triggering file upload on click
-                  setPreview(null);
-                }}
-                className="bg-white text-red-500 p-2 rounded-full flex items-center gap-2"
-              >
-                <Trash2 size={18} />
-                Remove
-              </button> */}
               <div className="flex flex-col justify-center items-center">
                 <CloudDownload />
                 <p className="text-center p-2">
@@ -196,7 +186,12 @@ const AvatarUpload: React.FC<AvatarUploadProps> = ({ onUpload }) => {
             <p className="text-center p-2">Drag & drop, or click to upload</p>
           </div>
         )}
-        {loading && <p className="mt-2 text-sm text-gray-300">Uploading...</p>}
+        {loading && (
+          // <p className=" absolute mt-2 text-sm text-gray-300">Uploading...</p>
+          <div className="absolute w-full h-full flex justify-center items-center bg-black/50">
+            <img src="./load.gif" alt="loading" className="w-28 h-28" />
+          </div>
+        )}
         {error && <p className="text-red-500">{error}</p>}
       </div>
     </div>

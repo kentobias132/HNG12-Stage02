@@ -1,6 +1,5 @@
 import React from "react";
 import ProgressIndicator from "./ProgressIndicator";
-import { MapPin } from "lucide-react";
 import Button from "./Custom-button";
 
 interface ConfirmationProps {
